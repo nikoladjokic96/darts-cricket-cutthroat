@@ -1,0 +1,91 @@
+.main-container {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.svg-container {
+  width: 800px;
+  height: 800px;
+}
+
+.ui {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 25px;
+  font-size: 16px;
+  text-align: center;
+  padding: 10px;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.scoreboard {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.player-hits {
+  display: flex;
+  align-items: flex-start;
+  padding: 0px 10px 0px 10px;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.score-header {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 1280px) {
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .ui {
+    width: 50%;
+  }
+
+  .svg-container {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .ui {
+    width: 75%;
+  }
+
+  .info {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  .ui {
+    width: 100%;
+  }
+
+  .info {
+    font-size: 12px;
+  }
+}
