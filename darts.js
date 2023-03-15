@@ -42,7 +42,7 @@ const options = {
   s: 1,
 }
 let darts = 3
-let rounds = 9
+let rounds = 1
 let counter = 0
 let finalScoreP1 = 0
 let finalScoreP2 = 0
@@ -112,7 +112,6 @@ function onHandleClick(event) {
   const selectedValue = event.target.id.substring(1)
   const multiplier = event.target.id.charAt(0)
   updateScore(selectedValue, options[multiplier])
-  updateFinalScore(selectedValue * options[multiplier])
   counter++
   if (counter === 6) {
     counter = 0
@@ -132,6 +131,7 @@ function onHandleClick(event) {
 function updateScore(number, score) {
   if (players[currentPlayer][number] === 'X') {
     //return updateFinalScore(number * score)
+    return updateFinalScore(number * score)
   }
   // Check if the number is valid
   if (players[currentPlayer][number] !== undefined) {
